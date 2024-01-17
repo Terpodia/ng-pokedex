@@ -1,0 +1,11 @@
+<div class="wrapper-cards">
+    <h1>LosReyes2008</h1>
+
+    <app-search-bar> </app-search-bar>
+
+    <div class="cards">
+        @for (pokemon of pokemons; track $index) {
+            <app-pokemon-card [pokemon]="pokemon" (click)="search(pokemon.name)"></app-pokemon-card>
+        }
+    </div>
+</div>

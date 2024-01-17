@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .cover {
+    border: 1px solid black;
+    margin-right: 30px;
+    background-color: aqua;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  .border-type {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}

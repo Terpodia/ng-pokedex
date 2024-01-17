@@ -1,0 +1,26 @@
+<ng-container *ngIf="pokemon">
+  <div class="cover">
+    <img
+      [src]="pokemon.sprites.other['official-artwork'].front_shiny"
+      [alt]="pokemon.name"
+      loading="lazy"
+    />
+  </div>
+
+  <div
+    class="info"
+    [ngStyle]="{
+      'background-color': 'black'
+    }"
+  >
+    <div class="header">
+      <span>{{ pokemon.id }}</span>
+      <span>{{ pokemon.name | titlecase }}</span>
+    </div>
+    <div class="types">
+      @for (type of pokemon.types; track type.type.name) {
+      <span>{{ type.type.name | titlecase }}</span>
+      }
+    </div>
+  </div>
+</ng-container>

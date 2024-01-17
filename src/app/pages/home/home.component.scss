@@ -1,0 +1,13 @@
+.wrapper-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px;   
+        max-width: 1600px;
+    }
+}

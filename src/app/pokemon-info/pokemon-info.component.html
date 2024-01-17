@@ -1,0 +1,26 @@
+<ng-container *ngIf="pokemon">
+  <h1>{{ pokemon.name | titlecase }}</h1>
+
+  <div class="types">
+    @for (type of pokemon.types; track $index) {
+    <div class="border-type" [ngStyle]="{'background-color': mapType2Color[type.type.name]}">
+      <span> {{ type.type.name | titlecase }} </span>
+    </div>
+    }
+  </div>
+
+  <div class="wrapper">
+    <div class="cover">
+      <img
+        [src]="pokemon.sprites.other['official-artwork'].front_shiny"
+        [alt]="pokemon.name"
+        loading="lazy"
+      />
+    </div>
+    <div class="description">
+      <span>height: {{ pokemon.height / 10 }}m</span>
+      <span>weight: {{ pokemon.weight / 10 }}kg</span>
+      <span>{{ pokemon.abilities[0].ability.name }}</span>
+    </div>
+  </div>
+</ng-container>
